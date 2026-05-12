@@ -51,13 +51,13 @@ MES showed consistent edge across all three windows with no daily loss limit hit
 pip install -r requirements.txt
 
 # Run windowed consistency test on both instruments (main mode)
-python es_liquidity_grab_backtest.py --compare
+python backtester.py --compare
 
 # Single instrument
-python es_liquidity_grab_backtest.py --ticker MES=F --days 60
+python backtester.py --ticker MES=F --days 60
 
 # Load from your own CSV (bypasses yfinance 60-day limit)
-python es_liquidity_grab_backtest.py --csv mydata.csv
+python backtester.py --csv mydata.csv
 
 # Flags
 --no-plot                      # Skip chart output
